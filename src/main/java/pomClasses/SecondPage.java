@@ -22,30 +22,32 @@ public WebDriver driver;
 		PageFactory.initElements(driver,this);	
 	}
 	@FindBy(xpath="//input[@id='ee-form-3-form-3-firstName']")
-	WebElement sendFirstName;
+	WebElement FirstName;
 	
 	public void sendFirstName() throws IOException
 	{
-		sendFirstName.clear();
-	sendFirstName.sendKeys("Trushant");
+		FirstName.clear();
+		FirstName.sendKeys("Suraj");
+	
 	}
 	
 	@FindBy(xpath="//input[@id='ee-form-3-form-3-email']")
-	WebElement sendEmailId;
+	WebElement EmailId;
 	
 	public void sendEmailID() throws IOException
 	{
-		sendEmailId.clear();
-		sendEmailId.sendKeys("mahatkartrushant@gmail.com");
+		EmailId.clear();
+		EmailId.sendKeys("surajbodake2209@gmail.com");
 	}	
 	
 	@FindBy(xpath="//input[@id='ee-form-3-form-3-mobile']")
-	WebElement sendMobileNo;
+	WebElement MobileNo;
 	
 	public void sendMobileNo() throws IOException
 	{
-		sendMobileNo.clear();
-		sendMobileNo.sendKeys("9172125373");
+
+		MobileNo.clear();
+		MobileNo.sendKeys("7028732209");
 	}
 	
 	@FindBy(xpath="//span[@class='select2-selection select2-selection--single']")
@@ -61,35 +63,35 @@ public WebDriver driver;
 	}
 
 	@FindBy(xpath="//textarea[@id='ee-form-3-form-3-comments']")
-	WebElement sendComment;
+	WebElement Comment;
 	
 	public void sendComment() throws IOException
 	{
-		sendComment.clear();
-		sendComment.sendKeys("NA");
+		Comment.clear();
+		Comment.sendKeys("NA");
 	}
 
 	@FindBy(xpath="//input[@id='ee-form-3-form-3-iAgree']")
-	WebElement clickCheckBox;
+	WebElement CheckBox;
 	
 	public void clickCheckBox() throws IOException
 	{
-		clickCheckBox.click();
+		CheckBox.click();
 	}
 	
 	@FindBy(xpath="	//button[@id='ee-form-3-form-3-submit']")
-	WebElement clickSubmitButton;
+	WebElement SubmitButton;
 	
 	public void clickSubmitButton() throws IOException
 	{
-		clickSubmitButton.click();
+		SubmitButton.click();
 	}
 
 	@FindBy(xpath="//button[@class='btn btn-feedback-control btn-feedback-custom']")
-	WebElement clickToFillTheApplication;
+	WebElement FillTheApplication;
 	
 	public void clickToFillTheApplication() throws IOException
 	{
-		clickToFillTheApplication.click();
+		FillTheApplication.click();
 	}
 }

@@ -1,9 +1,12 @@
 package pomClasses;
 
+
+
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseClass 
@@ -28,15 +31,13 @@ public class BaseClass
 		
 		String actualURL = driver.getCurrentUrl();
 		
-		if(actualURL.equalsIgnoreCase(expectedURL))
-		{
-			System.out.println("Correct URL is Opened");
-		}
-		else
-		{
-			System.out.println("URL is Wrong");
-		}
 		
+		String expectedTitle = "ExtraaEdge | (Demo) Form Widget";
+		
+		String actualTitle = driver.getTitle();
+		
+		System.out.println(actualTitle);
+		Assert.assertEquals(actualTitle, expectedTitle);
 		
 		FirstPage fp = new FirstPage(driver);
 		

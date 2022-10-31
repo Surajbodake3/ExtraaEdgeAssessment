@@ -3,7 +3,7 @@ package testClass;
 import org.testng.annotations.Test;
 import pomClasses.BaseClass;
 
-public class VerifyPage1 extends BaseClass
+public class VerifySecnondPage extends BaseClass
 {
 	@Test
 	public static void verifyPage1Functionality()

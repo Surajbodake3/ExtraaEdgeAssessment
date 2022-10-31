@@ -10,10 +10,10 @@ import pomClasses.BaseClass;
 import pomClasses.SecondPage;
 import pomClasses.ThirdPage;
 
-public class VerifyPage2 extends BaseClass
+public class VerifyThirdPage extends BaseClass
 {
 	@Test
-	public void verifySecondPage() throws IOException, InterruptedException
+	public void Verifypages() throws IOException, InterruptedException
 	{
 		SecondPage sp =new SecondPage(driver);
 		
@@ -40,9 +40,9 @@ public class VerifyPage2 extends BaseClass
 		
 		ThirdPage tp = new ThirdPage(driver);
 		tp.clickToProceed();
-		tp.stream();
+		tp.streamclick();
 		tp.course();
-		tp.campusPreference();
+		tp.campuspreference();
 		tp.preferrenceDate();
 		tp.dateOfBirth();
 		tp.bloodGroup();

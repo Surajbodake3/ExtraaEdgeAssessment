@@ -1,7 +1,9 @@
 package pomClasses;
 
 import java.io.IOException;
+import java.util.List;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -27,17 +29,29 @@ public WebDriver driver;
 		clickToProceed.click();
 	}
 	
-	@FindBy(xpath="(//div[@class=' css-tlfecz-indicatorContainer'])[4]")
+	@FindBy(xpath="(//div[@class=' css-1hwfws3'])[2]")
 	WebElement stream;
-	public void stream() throws InterruptedException
+	public void streamclick() throws InterruptedException
 	{
+		stream.clear();
+//		List<WebElement> allOptions = driver.findElements(By.xpath("//div[@class=' css-1hwfws3'])[2]"));
+//        System.out.println(allOptions.size());
+//               
+//        for(int i = 0; i<allOptions.size(); i++) 
+//        {     
+//            if(allOptions.get(i).getText().contains("Btech (Mechanical Engineering)")) 
+//            {
+//                 allOptions.get(i).click();
+//            }
+//        }
 		Thread.sleep(2000);
 		stream.click();
 		Thread.sleep(2000);
-		stream.sendKeys("Btech");
+		stream.sendKeys("Btech (Mechanical Engineering)");
 		Thread.sleep(2000);
 		stream.sendKeys(Keys.ENTER);	
 		Thread.sleep(2000);
+	
 	}
 	
 			@FindBy(xpath="(//div[@class=' css-tlfecz-indicatorContainer'])[6]")
@@ -45,17 +59,28 @@ public WebDriver driver;
 	
 			public void course()
 			{
+				course.clear();
 				course.click();
-				course.sendKeys("2010");
+				course.sendKeys("0112012");
 				course.sendKeys(Keys.ENTER);	
 			}
 	
+			@FindBy (xpath = "(//div[@class=' css-yk16xz-control'])[4]")
+			WebElement campuspreference;
+			
+			public void campuspreference()
+			{
+				campuspreference.clear();
+				campuspreference.click();
+				campuspreference.sendKeys("Field1F");
+				campuspreference.sendKeys(Keys.ENTER);
+			}
 			@FindBy(xpath="//input[@id='preferredDate']")
 			WebElement preferrenceDate;
 			
 			public void preferrenceDate()
 			{
-				preferrenceDate.sendKeys("10/09/2022");	
+				preferrenceDate.sendKeys("22/09/2022");	
 			}
 			
 			@FindBy(xpath="//input[@id='dateOfBirth']")
@@ -63,17 +88,9 @@ public WebDriver driver;
 			
 			public void dateOfBirth()
 			{
-				dateOfBirth.sendKeys("10/07/1992");	
+				dateOfBirth.sendKeys("09/22/1995");	
 			}
-			@FindBy(xpath="(//div[@class=' css-tlfecz-indicatorContainer'])[7]")
-			WebElement campusPreference;
 			
-			public void campusPreference()
-			{
-				campusPreference.click();
-				campusPreference.sendKeys("Field1F");
-				campusPreference.sendKeys(Keys.ENTER);	
-			}
 			
 			@FindBy(xpath="(//div[@class=' css-tlfecz-indicatorContainer'])[8]")
 			WebElement bloodGroup;
@@ -81,7 +98,7 @@ public WebDriver driver;
 			public void bloodGroup()
 			{
 				bloodGroup.click();
-				bloodGroup.sendKeys("O+");
+				bloodGroup.sendKeys("AB+ve");
 				bloodGroup.sendKeys(Keys.ENTER);	
 			}
 			
@@ -127,7 +144,7 @@ public WebDriver driver;
 			
 			public void alternateMobileNo()
 			{
-				alternateMobileNo.sendKeys("9172265373");	
+				alternateMobileNo.sendKeys("7387427825");	
 			}
 			
 			@FindBy(xpath="//input[@id='alternateEmailAddress']")
@@ -135,7 +152,7 @@ public WebDriver driver;
 			
 			public void alternateEmailAddress()
 			{
-				alternateEmailAddress.sendKeys("mahatkartrushant@gmail.com");	
+				alternateEmailAddress.sendKeys("surajbodake3@gmail.com");	
 			}
 			
 			@FindBy(xpath="//input[@id='passportNumber']")
@@ -143,7 +160,7 @@ public WebDriver driver;
 			
 			public void passportNumber()
 			{
-				passportNumber.sendKeys("125555151515");	
+				passportNumber.sendKeys("132453465768");	
 			}
 			
 			@FindBy(xpath="//input[@id='passportDateofIssue']")
@@ -151,7 +168,7 @@ public WebDriver driver;
 			
 			public void passportDateofIssue()
 			{
-				passportDateofIssue.sendKeys("28/10/2022");	
+				passportDateofIssue.sendKeys("06/04/2022");	
 			}
 			
 			@FindBy(xpath="//input[@id='passportExpiryDate']")
@@ -159,7 +176,7 @@ public WebDriver driver;
 			
 			public void passportExpiryDate()
 			{
-				passportExpiryDate.sendKeys("28/10/2025");	
+				passportExpiryDate.sendKeys("05/31/2030");	
 			}
 			
 			@FindBy(xpath="(//div[@class=' css-tlfecz-indicatorContainer'])[13]")
